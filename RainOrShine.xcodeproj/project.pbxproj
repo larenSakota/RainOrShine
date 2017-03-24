@@ -97,8 +97,10 @@
 		74F891E61E85B1EB00B544E6 /* RainOrShine */ = {
 			isa = PBXGroup;
 			children = (
+				74F892151E85B1FD00B544E6 /* Model */,
+				74F892171E85B21400B544E6 /* Controller */,
+				74F892161E85B20900B544E6 /* View */,
 				74F891E71E85B1EB00B544E6 /* AppDelegate.swift */,
-				74F891E91E85B1EB00B544E6 /* ViewController.swift */,
 				74F891EB1E85B1EB00B544E6 /* Main.storyboard */,
 				74F891EE1E85B1EB00B544E6 /* Assets.xcassets */,
 				74F891F01E85B1EB00B544E6 /* LaunchScreen.storyboard */,
@@ -123,6 +125,28 @@
 				74F892091E85B1EC00B544E6 /* Info.plist */,
 			);
 			path = RainOrShineUITests;
+			sourceTree = "<group>";
+		};
+		74F892151E85B1FD00B544E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		74F892161E85B20900B544E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		74F892171E85B21400B544E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74F891E91E85B1EB00B544E6 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,6 +14,10 @@
 		74F891F21E85B1EB00B544E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F891F01E85B1EB00B544E6 /* LaunchScreen.storyboard */; };
 		74F891FD1E85B1EB00B544E6 /* RainOrShineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F891FC1E85B1EB00B544E6 /* RainOrShineTests.swift */; };
 		74F892081E85B1EC00B544E6 /* RainOrShineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F892071E85B1EC00B544E6 /* RainOrShineUITests.swift */; };
+		74F8921B1E88B21300B544E6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F892191E88B21300B544E6 /* Alamofire.framework */; };
+		74F8921C1E88B21300B544E6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */; };
+		74F8921E1E88B26F00B544E6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74F892191E88B21300B544E6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74F8921F1E88B26F00B544E6 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		74F8921D1E88B23400B544E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				74F8921E1E88B26F00B544E6 /* Alamofire.framework in CopyFiles */,
+				74F8921F1E88B26F00B544E6 /* SwiftyJSON.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		74F891E41E85B1EB00B544E6 /* RainOrShine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainOrShine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F891E71E85B1EB00B544E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +65,8 @@
 		74F892031E85B1EC00B544E6 /* RainOrShineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainOrShineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F892071E85B1EC00B544E6 /* RainOrShineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainOrShineUITests.swift; sourceTree = "<group>"; };
 		74F892091E85B1EC00B544E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74F892191E88B21300B544E6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F8921B1E88B21300B544E6 /* Alamofire.framework in Frameworks */,
+				74F8921C1E88B21300B544E6 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,7 @@
 				74F891FB1E85B1EB00B544E6 /* RainOrShineTests */,
 				74F892061E85B1EC00B544E6 /* RainOrShineUITests */,
 				74F891E51E85B1EB00B544E6 /* Products */,
+				74F892181E88B21200B544E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +172,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		74F892181E88B21200B544E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F892191E88B21300B544E6 /* Alamofire.framework */,
+				74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +191,7 @@
 				74F891E01E85B1EB00B544E6 /* Sources */,
 				74F891E11E85B1EB00B544E6 /* Frameworks */,
 				74F891E21E85B1EB00B544E6 /* Resources */,
+				74F8921D1E88B23400B544E6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -440,6 +473,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68FLA3XZ62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RainOrShine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sakota.RainOrShine;
@@ -453,6 +490,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68FLA3XZ62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RainOrShine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sakota.RainOrShine;

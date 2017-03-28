@@ -18,6 +18,8 @@
 		74F8921C1E88B21300B544E6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */; };
 		74F8921E1E88B26F00B544E6 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74F892191E88B21300B544E6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74F8921F1E88B26F00B544E6 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		74F892211E8A0F8B00B544E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F892201E8A0F8B00B544E6 /* Constants.swift */; };
+		74F892231E8A126B00B544E6 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F892221E8A126B00B544E6 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		74F892091E85B1EC00B544E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F892191E88B21300B544E6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		74F8921A1E88B21300B544E6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		74F892201E8A0F8B00B544E6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74F892221E8A126B00B544E6 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		74F892151E85B1FD00B544E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74F892201E8A0F8B00B544E6 /* Constants.swift */,
+				74F892221E8A126B00B544E6 /* CurrentWeather.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -321,6 +327,8 @@
 			files = (
 				74F891EA1E85B1EB00B544E6 /* WeatherVC.swift in Sources */,
 				74F891E81E85B1EB00B544E6 /* AppDelegate.swift in Sources */,
+				74F892231E8A126B00B544E6 /* CurrentWeather.swift in Sources */,
+				74F892211E8A0F8B00B544E6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

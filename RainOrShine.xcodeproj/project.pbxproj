@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7416C8661E9C1E800078A122 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416C8651E9C1E800078A122 /* Forecast.swift */; };
 		74F891E81E85B1EB00B544E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F891E71E85B1EB00B544E6 /* AppDelegate.swift */; };
 		74F891EA1E85B1EB00B544E6 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F891E91E85B1EB00B544E6 /* WeatherVC.swift */; };
 		74F891ED1E85B1EB00B544E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F891EB1E85B1EB00B544E6 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7416C8651E9C1E800078A122 /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		74F891E41E85B1EB00B544E6 /* RainOrShine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainOrShine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F891E71E85B1EB00B544E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F891E91E85B1EB00B544E6 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				74F892201E8A0F8B00B544E6 /* Constants.swift */,
 				74F892221E8A126B00B544E6 /* CurrentWeather.swift */,
+				7416C8651E9C1E800078A122 /* Forecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				74F891E81E85B1EB00B544E6 /* AppDelegate.swift in Sources */,
 				74F892231E8A126B00B544E6 /* CurrentWeather.swift in Sources */,
 				74F892211E8A0F8B00B544E6 /* Constants.swift in Sources */,
+				7416C8661E9C1E800078A122 /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +591,7 @@
 				74F8920E1E85B1EC00B544E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74F8920F1E85B1EC00B544E6 /* Build configuration list for PBXNativeTarget "RainOrShineTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +600,7 @@
 				74F892111E85B1EC00B544E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74F892121E85B1EC00B544E6 /* Build configuration list for PBXNativeTarget "RainOrShineUITests" */ = {
 			isa = XCConfigurationList;
@@ -603,6 +609,7 @@
 				74F892141E85B1EC00B544E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

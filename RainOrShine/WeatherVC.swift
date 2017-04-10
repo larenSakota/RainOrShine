@@ -51,7 +51,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func updateMainUI() {
         dateLabel.text = currentWeather.date
-        currentTempLabel.text = "\(currentWeather.currentTemp)"
+        currentTempLabel.text = "\(currentWeather.currentTemp)°"
         currentWeatherTypeLabel.text = currentWeather.weatherType
         cityLabel.text = currentWeather.cityName
         currentWeatherImage.image = UIImage(named: currentWeather.weatherType)

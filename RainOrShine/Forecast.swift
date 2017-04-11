@@ -14,8 +14,8 @@ class Forecast {
     
     var _date: String!
     var _weatherType: String!
-    var _highTemp: String!
-    var _lowTemp: String!
+    var _highTemp: Int!
+    var _lowTemp: Int!
     
     var date: String {
         if _date == nil {
@@ -31,16 +31,16 @@ class Forecast {
         return _weatherType
     }
     
-    var highTemp: String {
+    var highTemp: Int {
         if _highTemp == nil {
-            _highTemp = ""
+            _highTemp = 0
         }
         return _highTemp
     }
     
-    var lowTemp: String {
+    var lowTemp: Int {
         if _lowTemp == nil {
-            _lowTemp = ""
+            _lowTemp = 0
         }
         return _lowTemp
     }
@@ -55,7 +55,7 @@ class Forecast {
                 
                 let kelvinToFarenheit = Double(10 * kelvinToFarenheitPreDivision/10)
                 
-                self._lowTemp = "\(round(kelvinToFarenheit))"
+                self._lowTemp = Int(round(kelvinToFarenheit))
                 
                 }
             
@@ -65,7 +65,7 @@ class Forecast {
                 
                 let kelvinToFarenheit = Double(10 * kelvinToFarenheitPreDivision/10)
                 
-                self._highTemp = "\(round(kelvinToFarenheit))"
+                self._highTemp = Int(round(kelvinToFarenheit))
             }
         }
         

@@ -91,6 +91,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JA5-fX-PBt">
                                         <rect key="frame" x="384" y="22" width="22" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="q2v-nj-SgC" kind="presentation" id="Adm-b6-Kw2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40483867499834858" green="0.79378165622841346" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -222,6 +225,53 @@
                 <swipeGestureRecognizer direction="right" id="eAn-yF-4CX"/>
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="138.58695652173915"/>
+        </scene>
+        <!--Add CityVC-->
+        <scene sceneID="WG6-dn-BkA">
+            <objects>
+                <viewController id="fY5-DE-SmO" customClass="AddCityVC" customModule="RainOrShine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SII-D7-74R"/>
+                        <viewControllerLayoutGuide type="bottom" id="LTO-fH-KPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1UL-fC-abH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3pP-6e-QxW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DO7-jZ-kh0">
+                            <connections>
+                                <action selector="cancel:" destination="fY5-DE-SmO" id="yg2-n6-4oL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="kqN-20-xqI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveBtn" destination="kqN-20-xqI" id="sMm-EF-nAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8E6-3V-Hq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ucn-7Y-I9b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q2v-nj-SgC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yuh-2w-0u5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fY5-DE-SmO" kind="relationship" relationship="rootViewController" id="dsG-GV-2Uy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1V-CZ-1jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="-423"/>
         </scene>
     </scenes>
 </document>

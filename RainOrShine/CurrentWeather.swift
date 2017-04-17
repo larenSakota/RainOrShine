@@ -15,6 +15,8 @@ class CurrentWeather {
     var _date: String!
     var _weatherType: String!
     var _currentTemp: Int!
+    var _highTemp: Int!
+    var _lowTemp: Int!
     
     var cityName: String {
         if _cityName == nil {
@@ -32,7 +34,7 @@ class CurrentWeather {
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         let currentDate = dateFormatter.string(from: Date())
-        self._date = "Today, \(currentDate)"
+        self._date = "Today \(currentDate)"
         return _date
     }
     
@@ -48,6 +50,20 @@ class CurrentWeather {
             _currentTemp = 0
         }
         return _currentTemp
+    }
+    
+    var highTemp: Int {
+        if _highTemp == nil {
+            _highTemp = 0
+        }
+        return _highTemp
+    }
+    
+    var lowTemp: Int {
+        if _lowTemp == nil {
+            _lowTemp = 0
+        }
+        return _lowTemp
     }
     
     func downloadWeatherDetails(completed: @escaping DownloadComplete) {
@@ -80,6 +96,24 @@ class CurrentWeather {
                         
                         self._currentTemp = Int(round(kelvinToFarenheit))
                         print(self._currentTemp)
+                    }
+                }
+                
+                if let main = dict["main"] as? Dictionary<String, AnyObject> {
+                    
+                    if let highTemperature = main["temp_max"] as? Double {
+                        let kelvinToFarenheit = (1.8 * (highTemperature - 273.15) + 32)
+                        self._highTemp = Int(kelvinToFarenheit)
+                        print(self._highTemp)
+                    }
+                }
+                
+                if let main = dict["main"] as? Dictionary<String, AnyObject> {
+                    
+                    if let lowTemperature = main["temp_min"] as? Double {
+                        let kelvinToFarenheit = (1.8 * (lowTemperature - 273.15) + 32)
+                        self._lowTemp = Int(kelvinToFarenheit)
+                        print(self._lowTemp)
                     }
                 }
             }

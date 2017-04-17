@@ -19,6 +19,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     @IBOutlet weak var currentWeatherImage: UIImageView!
     @IBOutlet weak var currentWeatherTypeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var currentHighTemp: UILabel!
+    @IBOutlet weak var currentLowTemp: UILabel!
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -40,12 +42,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         
         currentWeather = CurrentWeather()
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         locationAuthStatus()
     }
+
     
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -55,6 +54,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
             currentWeather.downloadWeatherDetails {
                 self.downloadForecastData {
                     self.updateMainUI()
+                    self.forecasts.remove(at: 0)
                 }
             }
         } else {
@@ -76,7 +76,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                         let forecast = Forecast(weatherDict: obj)
                         self.forecasts.append(forecast)
                     }
-                    self.forecasts.remove(at: 0)
+//                    self.forecasts.remove(at: 0)
                     self.tableView.reloadData()
                 }
             }
@@ -89,7 +89,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return forecasts.count
+        return forecasts.count - 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,11 +107,17 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     func updateMainUI() {
         dateLabel.text = currentWeather.date
         currentTempLabel.text = "\(currentWeather.currentTemp)°"
-        currentWeatherTypeLabel.text = currentWeather.weatherType
+        currentWeatherTypeLabel.text = forecasts[0].weatherType
         cityLabel.text = currentWeather.cityName
-        currentWeatherImage.image = UIImage(named: currentWeather.weatherType)
+        currentWeatherImage.image = UIImage(named: forecasts[0].weatherType)
+        currentHighTemp.text = "\(forecasts[0].highTemp)"
+        currentLowTemp.text = "| \(forecasts[0].lowTemp)"
     }
 
+    func removeFirstForecast() {
+        self.forecasts.remove(at: 0)
+        tableView.beginUpdates()
+    }
 
 
 }

@@ -25,19 +25,7 @@ class AddCityVC: UIViewController, UINavigationControllerDelegate, UITextFieldDe
 
     // MARK: - Navigation
 
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
-        let isPresentingInAddCityMode = presentingViewController is UINavigationController
- 
-        if isPresentingInAddCityMode {
-            dismiss(animated: true, completion: nil)
-        }
-        else if let owningNavigationController = navigationController{
-            owningNavigationController.popViewController(animated: true)
-        }
-        else {
-            fatalError("The AddCittyVC is not inside a navigation controller.")
-        }
+    @IBAction func cancelBtn(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
-
 }
